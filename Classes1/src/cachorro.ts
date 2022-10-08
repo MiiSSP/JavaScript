@@ -1,39 +1,53 @@
+
 import { Animais } from "./animais"
-export class Cachorro extends Animais 
+export class Cachorro extends Animais
 {
-    innome()
+
+    constructor 
+(
+    nome: string,
+    idade: string,
+    comunicacao: string,
+    mov: string,
+    som: string
+){
+    super(nome, idade, comunicacao, mov, som)
+}
+
+
+    innome(): void
     {
-        this.nome = "Também são conhecidos como cão ou cadela"
+        console.log (" Nomes: Também são conhecidos como cão ou cadela.")
     }
 
-    inidade() 
+    inidade(): void 
     {
-        this.idade = "Eles possuem uma expectativa de vida de 8 a 12 anos"
+        console.log (" Tempo de Vida: Eles possuem uma expectativa de vida de 8 a 12 anos.")
     }
 
-    incomunic() 
+    incomunic(): void 
     {
-        this.comunicacao = "Sua comunicação é feita através de latidos, uivos e rosnados"
+        console.log (" Comunicação: Sua comunicação é feita através de latidos, uivos e rosnados.")
     }
 
-    onomatopeia() 
+    onomatopeia(): void 
     {
-        this.som = "Os sons que os cachorros emitem são au au au"
+        console.log (" Onomatopeia: Os sons que os cachorros emitem são au au au.")
     }
     
-    movimento()
+    movimento(): void
     {
-        this.mov = `Eles se movimentam através da andadura, trote ou galope.
-        Sua velocidade média de corrida é de 35 km/h`
+        console.log (" Locomoção: Eles se movimentam através da andadura, trote ou galope.")
+        console.log (" Velocidade: Sua velocidade média de corrida é de 35 km/h. ")
     }
 
     apresentar()
     {
-        console.log("-----CACHORRO-----")
-        console.log(`Nomes:${this.nome}
-        Tempo de Vida: ${this.idade}
-        Comunicação: ${this.comunicacao}
-        Onomatopeia: ${this.som}
-        Locomoção: ${this.mov}`)
+        console.log("\n---------CACHORRO---------")
+        this.innome()
+        this.inidade()
+        this.incomunic()
+        this.onomatopeia()
+        this.movimento()
     }
 }

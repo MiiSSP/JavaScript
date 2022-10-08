@@ -1,40 +1,52 @@
 import { Animais } from "./animais"
 export class Preguica extends Animais
 {
-    innome()
+
+    constructor 
+(
+    nome: string,
+    idade: string,
+    comunicacao: string,
+    mov: string,
+    som: string
+){
+    super(nome, idade, comunicacao, mov, som)
+}
+
+
+    innome(): void
     {
-        this.nome = "Também são conhecidos como Folivora, preguiça, aí, aígue e cabeluda."
+        console.log (" Nomes: Também são conhecidos como Folivora, Preguiça, Aí, Aígue e Cabeluda.")
     }
 
-    inidade() 
+    inidade(): void 
     {
-        this.idade = "Eles possuem uma expectativa de vida de 30 a 40 anos"
+        console.log (" Tempo de Vida: Eles possuem uma expectativa de vida de 30 a 40 anos.")
     }
 
-    incomunic() 
+    incomunic(): void 
     {
-        this.comunicacao = "Sua forma de comunicação é desconhecida"
+        console.log (" Comunicação: Sua forma de comunicação é desconhecida.")
     }
 
-    onomatopeia() 
+    onomatopeia(): void 
     {
-        this.som = "Os sons que os bichos preguiça emitem são desconhecidos"
+        console.log (" Onomatopeia: Os sons que os bichos preguiça emitem são desconhecidos.")
     }
-
-    movimento()
+    
+    movimento(): void
     {
-        this.mov = `Eles se movimentam através escaladas e nados.
-        Sua velocidade de movimentação terrestre é muito lenta
-        Na agua os bichos preguiça são extremamentes ageís `
+        console.log (" Locomoção: Eles se movimentam através escaladas e nados.")
+        console.log (" Velocidade: Sua velocidade de movimentação terrestre é muito lenta, mas na agua eles são ageís.")
     }
 
     apresentar()
     {
-        console.log("-----CAVALO-----")
-        console.log(`Nomes:${this.nome}
-        Tempo de Vida: ${this.idade}
-        Comunicação: ${this.comunicacao}
-        Onomatopeia: ${this.som}
-        Locomoção: ${this.mov}`)
+        console.log("\n---------PREGUIÇA---------")
+        this.innome()
+        this.inidade()
+        this.incomunic()
+        this.onomatopeia()
+        this.movimento()
     }
-}
+}    

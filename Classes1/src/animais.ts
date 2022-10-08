@@ -21,14 +21,11 @@ export abstract class Animais
         this.mov = mov
         this.som = som
     }
-
-    abstract innome(nome: string)
-
-    abstract inidade(idade: string)
-
-    abstract incomunic(comunicacao: string)
-
-    abstract movimento(mov: string)
-
-    onomatopeia (som: string){}
+    
+    innome(){}
+    inidade(){}
+    incomunic(){}
+    movimento(){}
+    onomatopeia (){}
+    
 }
